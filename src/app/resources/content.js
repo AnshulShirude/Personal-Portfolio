@@ -1,20 +1,19 @@
 import { Logo } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Anshul",
+  lastName: "Shirude",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "apshirude28@gmail.com",
+  languages: ["English", "Hindi"],
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -30,17 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/AnshulShirude",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
+    link: "https://www.linkedin.com/in/anshul-shirude/",
   },
   {
     name: "Email",
@@ -55,16 +49,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
-  featured: {
-    display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },
+  headline: <>Building software solutions</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Anshul, a recent graduate from Northeastern University in computer science. I am a software engineer.
+      <br /> Some of my hobbies are traveling, sports, weightlifting, real estate, stocks, and so much more.
     </>
   ),
 };
@@ -82,7 +71,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -90,52 +79,51 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm a software engineer with a passion for transforming complex challenges
+        into simple, elegant design solutions. My interests lie in data visualization,
+        machine learning, artificial intelligence, and full stack development.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Moody's Analytics",
+        timeframe: "Aug-Dec 2024",
+        role: "Full-Stack Software Developer Co-op",
+        technologies: "React, Python, Docker, Jinja",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Programmed a real-time email template preview editor supporting data model translations in React, Jinja, & Python.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Saved ~30 minutes per email for implementation engineers to configure the appropriate email per client.
+          </>,
+          <>
+            Migrated a new UI to enhance React application efficiency by 45% using Handsontable for Citi Bank clients.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Dell Technologies",
+        timeframe: "May-Aug 2024",
+        role: "Software Developer Intern",
+        technologies: "Python, Java, MongoDB",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Created visualizations to investigate web crawler services in Python with Matplotlib to
+            handle crawl failures in virtual machines.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Developed a REST API full-stack service connecting policies & failures integrated with
+            Jira & ServiceNow in Java.
+          </>,
+          <>
+            Resolved <strong>300k</strong> virtual machine failures (22% of crawls) by processing big data in Mongo
+            Query Language.
           </>,
         ],
         images: [],
@@ -144,15 +132,13 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Northeastern University",
+        description: <>B.S. in Computer Science</>,
+        gpa: "3.8/4.0",
+        achievements: "Magna Cum Laude, Dean's List, Honors"
       },
     ],
   },
@@ -161,36 +147,19 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Languages",
+        description: <>Java, Python, SQL, JavScript, TypeScript, HTML, CSS, R, C#, .Net</>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Frameworks",
+        description: <>React, Express, NextJS, Django, Pandas, NumPy, TensorFlow, Flask</>,
+        images: [],
+      },
+      {
+        title: "Tools",
+        description: <>Git, Docker, MySQL, AWS, Linux, Postman, Firebase, JUnit, PostgreSQL, Google Cloud</>,
+        images: [],
       },
     ],
   },
