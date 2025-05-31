@@ -8,83 +8,93 @@ import {
   Heading,
   SmartLink,
   Text,
+  Row,
+  SmartImage,
 } from "@/once-ui/components";
+import { formatDate } from "@/app/utils/formatDate";
 
 interface ProjectCardProps {
-  href: string;
   priority?: boolean;
-  images: string[];
+  href: string;
+  images?: string[];
   title: string;
-  content: string;
   description: string;
-  avatars: { src: string }[];
-  link: string;
+  previewPoints?: string[];
+  links?: Array<{ title: string; url: string }>;
+  content: string;
+  tag?: string;
+  publishedAt: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
+export function ProjectCard({
+  priority,
   href,
-  images = [],
+  images,
   title,
-  content,
   description,
-  avatars,
-  link,
-}) => {
+  previewPoints = [],
+  links = [],
+  content,
+  tag,
+  publishedAt,
+}: ProjectCardProps) {
   return (
-    <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        images={images.map((image) => ({
-          src: image,
-          alt: title,
-        }))}
-      />
-      <Flex
-        mobileDirection="column"
-        fillWidth
-        paddingX="s"
-        paddingTop="12"
-        paddingBottom="24"
-        gap="l"
-      >
-        {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
-            </Heading>
-          </Flex>
+    <SmartLink href={href} className="no-underline">
+      <Column gap="m" padding="m" radius="l" border="neutral-alpha-medium">
+        {images?.[0] && (
+          <SmartImage
+            priority={priority}
+            aspectRatio="16 / 9"
+            radius="m"
+            alt={title}
+            src={images[0]}
+          />
         )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
-            {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
-                {description}
+        <Column gap="s">
+          <Row horizontal="space-between" vertical="center">
+            <Text variant="label-strong-m">{title}</Text>
+            {tag && (
+              <Text variant="label-default-s" onBackground="neutral-weak">
+                {tag}
               </Text>
             )}
-            <Flex gap="24" wrap>
-              {content?.trim() && (
-                <SmartLink
-                  suffixIcon="arrowRight"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={href}
+          </Row>
+          <Text variant="body-default-s" onBackground="neutral-weak">
+            {description}
+          </Text>
+          {previewPoints.length > 0 && (
+            <Column gap="xs" marginTop="s">
+              {previewPoints.map((point, index) => (
+                <Text
+                  key={index}
+                  variant="body-default-s"
+                  onBackground="neutral-weak"
                 >
-                  <Text variant="body-default-s">Read case study</Text>
-                </SmartLink>
-              )}
-              {link && (
+                  • {point}
+                </Text>
+              ))}
+            </Column>
+          )}
+          <Text variant="label-default-xs" onBackground="neutral-weak">
+            {formatDate(publishedAt)}
+          </Text>
+          {links.length > 0 && (
+            <Row gap="m" marginTop="s">
+              {links.map((link, index) => (
                 <SmartLink
-                  suffixIcon="arrowUpRightFromSquare"
-                  style={{ margin: "0", width: "fit-content" }}
-                  href={link}
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  // variant="label-default-s"
+                  // onBackground="brand-weak"
                 >
-                  <Text variant="body-default-s">View project</Text>
+                  {link.title} →
                 </SmartLink>
-              )}
-            </Flex>
-          </Column>
-        )}
-      </Flex>
-    </Column>
+              ))}
+            </Row>
+          )}
+        </Column>
+      </Column>
+    </SmartLink>
   );
-};
+}

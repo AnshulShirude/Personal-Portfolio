@@ -1,0 +1,97 @@
+---
+title: "MRI2FE"
+summary: "Research software for automated generation of finite element head models from magnetic resonance imaging and elastography data"
+publishedAt: "2025-05-present"
+tag: "AI Research"
+preview:
+  [
+    "Developing computational methods for processing MRI and MRE data into finite element models",
+    "Implementing complex shear modulus calculations and spatial mapping algorithms",
+  ]
+links:
+  [
+    {
+      title: "GitHub Repository",
+      url: "https://github.com/turnerjennings/MRI2FE",
+    },
+  ]
+---
+
+## About
+
+MRI2FE is a research software tool that automates the generation of finite element head models from magnetic resonance imaging (MRI) and elastography (MRE) data. The project focuses on developing robust computational methods for medical image processing and biomechanical modeling.
+
+### Key Components
+
+- **Complex Shear Modulus Analysis** 🧮
+
+  - Implementation of modulus calculations from stiffness and damping ratio
+  - Julia-based optimization for prony constant determination
+  - Validation through back-calculation of μ and ξ parameters
+
+- **MRE Processing** 🧠
+
+  - MRI data loading and analysis
+  - Shear stiffness computation
+  - Damping ratio calculations
+  - Visualization capabilities 📊
+
+- **Spatial Mapping** 🗺️
+  - Element-to-part mapping from segmented spatial data
+  - Standardized coordinate system implementation
+
+### Technical Implementation
+
+- **File Processing**
+
+  - `.k` file parsing for FE model extraction
+  - Element centroid calculations
+  - NIFTI format conversion 📁
+
+- **Strain Analysis**
+
+  - 3D displacement field processing
+  - Principal direction strain calculations
+
+- **Data Conversion Pipeline**
+  - LS-DYNA d3plot data extraction
+  - Structured grid mapping
+
+### Tech Stack
+
+- Python
+- Julia (Optimization)
+- LS-DYNA
+- NIFTI Tools
+- Medical Imaging Libraries
+- Scientific Computing Packages
+
+## Research Applications
+
+1. **Biomechanical Modeling**
+
+   - Head injury simulation
+   - Material response studies
+
+2. **Medical Image Processing**
+
+   - MRI data standardization
+   - Elastography analysis
+   - Spatial registration
+
+3. **Clinical Translation**
+   - Patient-specific modeling
+   - Standardized analysis workflows
+
+### Current Development
+
+The project is actively being developed with ongoing work in:
+
+- Optimization of computational methods
+- Enhancement of spatial mapping accuracy
+- Implementation of additional validation metrics
+- Integration of advanced visualization tools
+
+### Links
+
+- [GitHub Repository](https://github.com/turnerjennings/MRI2FE)
