@@ -25,6 +25,11 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
+    name: "Resume",
+    icon: "document",
+    link: "https://drive.google.com/file/d/1Ua0dl21Ndk93xqEH8C1r4CzxHQmgV1Dr/view?usp=sharing",
+  },
+  {
     name: "GitHub",
     icon: "github",
     link: "https://github.com/AnshulShirude",
@@ -166,7 +171,7 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Clubs",
-  title: "My passions",
+  title: "Clubs",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route

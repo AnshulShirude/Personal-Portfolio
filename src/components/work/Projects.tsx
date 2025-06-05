@@ -42,7 +42,7 @@ export function Projects({ range }: ProjectsProps) {
 
   return (
     <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
-      <Text variant="display-strong-m">Building...</Text>
+      <Text variant="display-strong-m">Projects</Text>
       <Grid columns="2" mobileColumns="1" fillWidth gap="12">
         {displayedProjects.map((post, index) => (
           <ProjectCard
