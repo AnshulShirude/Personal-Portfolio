@@ -26,7 +26,10 @@ const sizeMapping: Record<"xs" | "s" | "m" | "l" | "xl", number> = {
   xl: 160,
 };
 
-const statusIndicatorSizeMapping: Record<"xs" | "s" | "m" | "l" | "xl", "s" | "m" | "l"> = {
+const statusIndicatorSizeMapping: Record<
+  "xs" | "s" | "m" | "l" | "xl",
+  "s" | "m" | "l"
+> = {
   xs: "s",
   s: "s",
   m: "m",
@@ -36,8 +39,18 @@ const statusIndicatorSizeMapping: Record<"xs" | "s" | "m" | "l" | "xl", "s" | "m
 
 const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
   (
-    { size = "m", value, src, loading, empty, statusIndicator, className, style = {}, ...rest },
-    ref,
+    {
+      size = "m",
+      value,
+      src,
+      loading,
+      empty,
+      statusIndicator,
+      className,
+      style = {},
+      ...rest
+    },
+    ref
   ) => {
     const sizeInRem = typeof size === "number" ? `${size}rem` : undefined;
     const sizeStyle = sizeInRem
@@ -77,7 +90,9 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
             onBackground="neutral-medium"
             name="person"
             size="m"
-            style={typeof size === "number" ? { fontSize: `${size}rem` } : undefined}
+            style={
+              typeof size === "number" ? { fontSize: `${size}rem` } : undefined
+            }
             className={styles.icon}
             aria-label="Empty avatar"
           />
@@ -91,7 +106,11 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
             src={src}
             fill
             alt="Avatar"
-            sizes={typeof size === "string" ? `${sizeMapping[size]}px` : `${size * 16}px`}
+            sizes={
+              typeof size === "string"
+                ? `${sizeMapping[size]}px`
+                : `${size * 16}px`
+            }
             className={styles.image}
           />
         );
@@ -124,22 +143,30 @@ const Avatar = forwardRef<HTMLDivElement, AvatarProps>(
         border="neutral-strong"
         background="surface"
         style={sizeStyle}
-        className={`${styles.avatar} ${typeof size === "string" ? styles[size] : ""} ${className || ""}`}
+        className={`${styles.avatar} ${
+          typeof size === "string" ? styles[size] : ""
+        } ${className || ""}`}
         {...rest}
       >
         {renderContent()}
         {statusIndicator && (
           <StatusIndicator
             position="absolute"
-            size={typeof size === "string" ? statusIndicatorSizeMapping[size] : "l"}
+            size={
+              typeof size === "string" ? statusIndicatorSizeMapping[size] : "l"
+            }
             color={statusIndicator.color}
-            className={`${styles.className || ""} ${styles.indicator} ${size === "xl" || (typeof size === "number" && size >= 10) ? styles.position : ""}`}
+            className={`${styles.className || ""} ${styles.indicator} ${
+              size === "xl" || (typeof size === "number" && size >= 10)
+                ? styles.position
+                : ""
+            }`}
             aria-label={`Status: ${statusIndicator.color}`}
           />
         )}
       </Flex>
     );
-  },
+  }
 );
 
 Avatar.displayName = "Avatar";
