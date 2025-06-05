@@ -4,9 +4,10 @@ import { ProjectCard } from "@/components";
 
 interface ProjectsProps {
   range?: [number, number?];
+  showHeader?: boolean;
 }
 
-export function Projects({ range }: ProjectsProps) {
+export function Projects({ range, showHeader = true }: ProjectsProps) {
   let allProjects = getPosts(["src", "app", "work", "projects"]);
 
   const getDateValue = (dateStr: string) => {
@@ -42,7 +43,7 @@ export function Projects({ range }: ProjectsProps) {
 
   return (
     <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
-      <Text variant="display-strong-m">Projects</Text>
+      {showHeader && <Text variant="display-strong-m">Projects</Text>}
       <Grid columns="2" mobileColumns="1" fillWidth gap="12">
         {displayedProjects.map((post, index) => (
           <ProjectCard
