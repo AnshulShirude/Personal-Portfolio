@@ -187,12 +187,10 @@ const work = {
 };
 
 const gallery = {
-  path: "/gallery",
+  path: "/hobbies",
   label: "Hobbies",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",

@@ -32,6 +32,14 @@ const nextConfig = {
         source: '/clubs/:path*',
         destination: '/blog/:path*',
       },
+      {
+        source: '/hobbies',
+        destination: '/gallery',
+      },
+      {
+        source: '/hobbies/:path*',
+        destination: '/gallery/:path*',
+      },
     ];
   },
 };

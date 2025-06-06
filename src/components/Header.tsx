@@ -150,20 +150,20 @@ export const Header = () => {
                   />
                 </>
               )}
-              {routes["/gallery"] && (
+              {routes["/hobbies"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="gallery"
-                    href="/gallery"
+                    href="/hobbies"
                     label={gallery.label}
-                    selected={pathname.startsWith("/gallery")}
+                    selected={pathname.startsWith("/hobbies")}
                   />
                   <ToggleButton
                     className="s-flex-show"
                     prefixIcon="gallery"
-                    href="/gallery"
-                    selected={pathname.startsWith("/gallery")}
+                    href="/hobbies"
+                    selected={pathname.startsWith("/hobbies")}
                   />
                 </>
               )}
