@@ -14,6 +14,18 @@ const nextConfig = {
     silenceDeprecations: ["legacy-js-api"],
   },
   devIndicators: false,
+  async rewrites() {
+    return [
+      {
+        source: '/projects',
+        destination: '/work',
+      },
+      {
+        source: '/projects/:path*',
+        destination: '/work/:path*',
+      },
+    ];
+  },
 };
 
 export default withMDX(nextConfig);

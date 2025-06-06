@@ -49,7 +49,7 @@ export function Projects({ range, showHeader = true }: ProjectsProps) {
           <ProjectCard
             priority={index < 2}
             key={post.slug}
-            href={`work/${post.slug}`}
+            href={`projects/${post.slug}`}
             images={post.metadata.images}
             title={post.metadata.title}
             description={post.metadata.summary}
