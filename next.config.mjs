@@ -24,6 +24,14 @@ const nextConfig = {
         source: '/projects/:path*',
         destination: '/work/:path*',
       },
+      {
+        source: '/clubs',
+        destination: '/blog',
+      },
+      {
+        source: '/clubs/:path*',
+        destination: '/blog/:path*',
+      },
     ];
   },
 };

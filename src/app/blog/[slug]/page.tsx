@@ -97,7 +97,7 @@ export default async function Blog({
           />
           <Button
             data-border="rounded"
-            href="/blog"
+            href="/clubs"
             weight="default"
             variant="tertiary"
             size="s"

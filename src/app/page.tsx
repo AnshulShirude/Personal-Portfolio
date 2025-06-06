@@ -8,15 +8,11 @@ import {
   Avatar,
   RevealFx,
   Column,
-  Badge,
-  Row,
 } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
-import { baseURL, routes } from "@/app/resources";
-import { home, about, person, newsletter } from "@/app/resources/content";
-import { Mailchimp } from "@/components";
-import { Posts } from "@/components/blog/Posts";
+import { baseURL } from "@/app/resources";
+import { home, about, person } from "@/app/resources/content";
 import { Meta, Schema } from "@/once-ui/modules";
 
 export async function generateMetadata() {

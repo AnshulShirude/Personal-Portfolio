@@ -27,7 +27,7 @@ export default function Blog() {
         image={`${baseURL}/og?title=${encodeURIComponent(blog.title)}`}
         author={{
           name: person.name,
-          url: `${baseURL}/blog`,
+          url: `${baseURL}/clubs`,
           image: `${baseURL}${person.avatar}`,
         }}
       />

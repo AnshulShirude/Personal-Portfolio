@@ -169,12 +169,12 @@ const about = {
 };
 
 const blog = {
-  path: "/blog",
+  path: "/clubs",
   label: "Clubs",
   title: "Clubs",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  // Create new club posts by adding a new .mdx file to app/clubs/posts
+  // All posts will be listed on the /clubs route
 };
 
 const work = {
@@ -182,7 +182,7 @@ const work = {
   label: "Projects",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
+  // Create new project pages by adding a new .mdx file to app/projects/posts
   // All projects will be listed on the /home and /projects routes
 };
 
