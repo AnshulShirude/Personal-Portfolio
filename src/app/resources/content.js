@@ -55,9 +55,9 @@ const home = {
   headline: <>Hello 👋</>,
   subline: (
     <>
-      I'm Anshul, a recent graduate from Northeastern University in computer science. I am a software engineer.
-      <br /> Some of my hobbies are traveling, sports, weightlifting, real estate, stocks, and so much more.
+      I'm Anshul, a hardworking, innovative, and results-driven software engineer consistently driving towards the successful launch of new products. I enjoy playing and watching sports, traveling, weightlifting, investing, and so much more.
     </>
+    
   ),
 };
 
