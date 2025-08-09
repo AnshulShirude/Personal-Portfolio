@@ -27,7 +27,7 @@ const social = [
   {
     name: "Resume",
     icon: "document",
-    link: "https://drive.google.com/file/d/19HMF5LIt7EmGI7aCg73-2sD-AItqoEls/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1FJISLCGsLSxl6kUpaGq0iyB5V1g5Ia9V/view?usp=sharing",
   },
   {
     name: "GitHub",
